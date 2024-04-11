@@ -262,7 +262,7 @@ _update_repo "prjoxide-db" "https://github.com/gatecat/prjoxide-db.git"
 
 # _update_repo "prjapicula" "https://github.com/YosysHQ/apicula.git"
 
-_update_repo "prjmistral" "https://github.com/Ravenslofty/mistral.git"
+# _update_repo "prjmistral" "https://github.com/Ravenslofty/mistral.git"
 
 # ==== Collect Hashes/Versions ==== #
 
@@ -314,9 +314,9 @@ PRJOXIDE_PKGVER=$(_mk_version "${PRJOXIDE_VERSION}")
 # PRJAPICULA_HASH=$(_repo_hash "prjapicula")
 # PRJAPICULA_PKGVER=$(_mk_version "${PRJAPICULA_VERSION}")
 
-PRJMISTRAL_VERSION=$(_repo_vesion "prjmistral")
-PRJMISTRAL_HASH=$(_repo_hash "prjmistral")
-PRJMISTRAL_PKGVER=$(_mk_version "${PRJMISTRAL_VERSION}")
+# PRJMISTRAL_VERSION=$(_repo_vesion "prjmistral")
+# PRJMISTRAL_HASH=$(_repo_hash "prjmistral")
+# PRJMISTRAL_PKGVER=$(_mk_version "${PRJMISTRAL_VERSION}")
 
 echo "Yosys: ${YOSYS_PKGVER} @ ${YOSYS_HASH}"
 echo "sby: ${SBY_PKGVER} @ ${SBY_HASH}"
@@ -329,7 +329,7 @@ echo "icestorm: ${ICESTORM_PKGVER} @ ${ICESTORM_HASH}"
 echo "prjtrellis: ${PRJTRELLIS_PKGVER} @ ${PRJTRELLIS_HASH}"
 echo "prjoxide: ${PRJOXIDE_PKGVER} @ ${PRJOXIDE_HASH}"
 # echo "prjapicula: ${PRJAPICULA_PKGVER} @ ${PRJAPICULA_HASH}"
-echo "prjmistral: ${PRJMISTRAL_PKGVER} @ ${PRJMISTRAL_HASH}"
+# echo "prjmistral: ${PRJMISTRAL_PKGVER} @ ${PRJMISTRAL_HASH}"
 
 
 _mk_pkgbuild_yosys "yosys" "${YOSYS_PKGVER}" "${YOSYS_HASH}"
@@ -345,7 +345,7 @@ _mk_pkgbuild "icestorm" "${ICESTORM_PKGVER}" "${ICESTORM_HASH}"
 _mk_pkgbuild_db "prjtrellis" "${PRJTRELLIS_PKGVER}" "${PRJTRELLIS_HASH}" "${PRJTRELLIS_DB_HASH}"
 _mk_pkgbuild_db "prjoxide" "${PRJOXIDE_PKGVER}" "${PRJOXIDE_HASH}"  "${PRJOXIDE_DB_HASH}"
 # _mk_pkgbuild "prjapicula" "${PRJAPICULA_PKGVER}" "${PRJAPICULA_HASH}"
-_mk_pkgbuild "prjmistral" "${PRJMISTRAL_PKGVER}" "${PRJMISTRAL_HASH}"
+# _mk_pkgbuild "prjmistral" "${PRJMISTRAL_PKGVER}" "${PRJMISTRAL_HASH}"
 
 
 _mk_pkgbuild "nextpnr-generic" "${NEXTPNR_PKGVER}" "${NEXTPNR_HASH}"
@@ -355,4 +355,4 @@ _mk_pkgbuild "nextpnr-machxo2" "${NEXTPNR_PKGVER}" "${NEXTPNR_HASH}"
 _mk_pkgbuild "nextpnr-ice40" "${NEXTPNR_PKGVER}" "${NEXTPNR_HASH}"
 _mk_pkgbuild "nextpnr-nexus" "${NEXTPNR_PKGVER}" "${NEXTPNR_HASH}"
 # _mk_pkgbuild "nextpnr-gowin" "${NEXTPNR_PKGVER}" "${NEXTPNR_HASH}"
-_mk_pkgbuild "nextpnr-mistral" "${NEXTPNR_PKGVER}" "${NEXTPNR_HASH}"
+# _mk_pkgbuild "nextpnr-mistral" "${NEXTPNR_PKGVER}" "${NEXTPNR_HASH}"
