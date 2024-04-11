@@ -1,0 +1,10 @@
+[Unit]
+Description=Refresh nightly AUR packages
+
+[Timer]
+OnCalendar=*-*-* 00:00:00 UTC
+AccuracySec=15m
+Persistent=true
+
+[Install]
+WantedBy=multi-user.target

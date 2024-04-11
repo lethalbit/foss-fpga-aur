@@ -1,0 +1,9 @@
+[Unit]
+Description=Refresh nightly AUR packages
+
+[Service]
+Environment=SSH_AUTH_SOCK=/run/user/1001/ssh-agent.socket
+WorkingDirectory=/data/aur-pkgs
+User=runner
+Group=users
+ExecStart=/data/aur-pkgs/scripts/update-pkgs.sh
