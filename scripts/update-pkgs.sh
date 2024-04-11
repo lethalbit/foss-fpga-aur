@@ -235,10 +235,11 @@ _update_aur_repo() {
 
 	PKG_REPO="${AUR_REPO}/${PKG_NAME}"
 	pushd "${PKG_REPO}" >/dev/null 2>&1
-	# git add PKGBUILD PKGBUILD.in .SRCINFO .gitignore
-	# git commit -m "Bumpped ${PKG_NAME} version to ${PKG_VER}"
-	# git push origin main:master
+	git add PKGBUILD PKGBUILD.in .SRCINFO .gitignore
+	git commit -m "Bumpped ${PKG_NAME} version to ${PKG_VER}"
+	git push origin master
 	popd   >/dev/null 2>&1
+	sleep 2
 }
 
 # ==== Update Repos ==== #
@@ -341,7 +342,6 @@ _mk_pkgbuild "mcy" "${MCY_PKGVER}" "${MCY_HASH}"
 
 _mk_pkgbuild "icestorm" "${ICESTORM_PKGVER}" "${ICESTORM_HASH}"
 
-
 _mk_pkgbuild_db "prjtrellis" "${PRJTRELLIS_PKGVER}" "${PRJTRELLIS_HASH}" "${PRJTRELLIS_DB_HASH}"
 _mk_pkgbuild_db "prjoxide" "${PRJOXIDE_PKGVER}" "${PRJOXIDE_HASH}"  "${PRJOXIDE_DB_HASH}"
 # _mk_pkgbuild "prjapicula" "${PRJAPICULA_PKGVER}" "${PRJAPICULA_HASH}"
@@ -356,3 +356,17 @@ _mk_pkgbuild "nextpnr-ice40" "${NEXTPNR_PKGVER}" "${NEXTPNR_HASH}"
 _mk_pkgbuild "nextpnr-nexus" "${NEXTPNR_PKGVER}" "${NEXTPNR_HASH}"
 # _mk_pkgbuild "nextpnr-gowin" "${NEXTPNR_PKGVER}" "${NEXTPNR_HASH}"
 # _mk_pkgbuild "nextpnr-mistral" "${NEXTPNR_PKGVER}" "${NEXTPNR_HASH}"
+
+_update_aur_repo "yosys" "${YOSYS_PKGVER}"
+_update_aur_repo "sby" "${SBY_PKGVER}"
+_update_aur_repo "eqy" "${EQY_PKGVER}"
+_update_aur_repo "mcy" "${MCY_PKGVER}"
+_update_aur_repo "icestorm" "${ICESTORM_PKGVER}"
+_update_aur_repo "prjtrellis" "${PRJTRELLIS_PKGVER}"
+_update_aur_repo "prjoxide" "${PRJOXIDE_PKGVER}"
+_update_aur_repo "nextpnr-generic" "${NEXTPNR_PKGVER}"
+_update_aur_repo "nextpnr-all" "${NEXTPNR_PKGVER}"
+_update_aur_repo "nextpnr-ecp5" "${NEXTPNR_PKGVER}"
+_update_aur_repo "nextpnr-machxo2" "${NEXTPNR_PKGVER}"
+_update_aur_repo "nextpnr-ice40" "${NEXTPNR_PKGVER}"
+_update_aur_repo "nextpnr-nexus" "${NEXTPNR_PKGVER}"
